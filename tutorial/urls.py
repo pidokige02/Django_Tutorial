@@ -25,7 +25,6 @@ router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('snippets.urls')),
     path('', include(router.urls)),  # users 와 groups 을 access 하기 위핸 정보를 표시함
-    path('snippets/', include('snippets.urls')),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
